@@ -1,0 +1,82 @@
+.banner {
+  background-image: url("../assets/images/banner/background-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  background-size: cover;
+}
+
+.banner::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $blue-background;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  @media (max-width: 1170px) {
+    padding: 0 20px;
+  }
+}
+
+.banner-content {
+  padding: 230px 0 119px;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 1024px) {
+    padding: 257px 0 125px;
+  }
+  @media (max-width: 480px) {
+    padding: 106px 0 52px;
+  }
+
+  &__title {
+    @include mainTitle;
+    margin-bottom: 32px;
+
+    @media (max-width: 1024px) {
+      max-width: 984px;
+      margin: 0 auto 62px auto;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 82px;
+    @media (max-width: 1024px) {
+      margin-bottom: 91px;
+    }
+    @media (max-width: 480px) {
+      margin-bottom: 52px;
+    }
+
+    &-text {
+      font-weight: 400;
+      color: $white;
+      @include textStyle-2;
+
+      @media (max-width: 480px) {
+        @include textStyle-1;
+      }
+    }
+  }
+
+  &__button {
+    @include btnRed-1;
+
+    &-link {
+      color: $white;
+    }
+  }
+}

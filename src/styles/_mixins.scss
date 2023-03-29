@@ -1,0 +1,176 @@
+@mixin textStyle-1 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-style: normal;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@mixin textStyle-2 {
+  font-size: 24px;
+  line-height: 28px;
+  font-style: normal;
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  @media (max-width: 670px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@mixin textStyle-3 {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+  font-style: normal;
+  color: $white;
+  @media (max-width: 1024px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@mixin textStyle-4 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  font-style: normal;
+  text-transform: uppercase;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@mixin textStyle-5 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  @media (max-width: 1024px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  @media (max-width: 670px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+@mixin textStyle-6 {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 28px;
+  font-style: normal;
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+@mixin textStyle-7 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+@mixin textQuote {
+  font-family: "Cardo";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: capitalize;
+  color: $white;
+  @media (max-width: 1024px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@mixin mainTitle {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 75px;
+  text-transform: uppercase;
+  font-style: normal;
+  color: $white;
+  @media (max-width: 1024px) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  @media (max-width: 670px) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+@mixin mainButtonText {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 28px;
+  font-style: normal;
+}
+
+@mixin btnRed-common {
+  width: 369px;
+  margin: 0 auto;
+  padding: 25px 0;
+  background-color: $red;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  transition: 0.1s;
+  &:hover {
+    background-color: $red-hover;
+  }
+  &:active {
+    box-shadow: 4px 4px 30px $red-hover;
+  }
+}
+
+@mixin btnRed-1 {
+  @include btnRed-common();
+  @include mainButtonText();
+  @media (max-width: 1024px) {
+    width: 313px;
+  }
+  @media (max-width: 670px) {
+    width: 280px;
+    padding: 15px 0;
+  }
+}
+
+@mixin btnRed-2 {
+  @include btnRed-common();
+  @include textStyle-6();
+  @media (max-width: 1024px) {
+    width: 314px;
+    padding: 28px 0;
+  }
+  @media (max-width: 670px) {
+    width: 278.5px;
+    padding: 28px 0;
+  }
+}
+
+@mixin flexBox-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flexBox-ctr {
+  display: flex;
+  justify-content: center;
+}

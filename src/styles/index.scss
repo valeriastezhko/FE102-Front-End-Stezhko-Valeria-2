@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  font-family: "Raleway";
+}
+
+@import "_cdn.scss";
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "header.scss";
+@import "banner.scss";
+@import "features.scss";
+@import "work.scss";
+@import "team.scss";
+@import "testimonials.scss";
+@import "download.scss";
+@import "footer-info.scss";
+@import "main-footer.scss";

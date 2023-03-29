@@ -1,0 +1,133 @@
+.main-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.main-header__container {
+  max-width: 1170px;
+  margin: 0 auto;
+  @media (max-width: 1170px) {
+    padding: 0 20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    margin-top: -4px;
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+}
+
+.main-header__content {
+  margin: 0 -15px;
+  @include flexBox-sb;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-header__logo {
+  margin: 0 15px;
+  &-image {
+    @media (max-width: 480px) {
+      width: 150px;
+      height: 56.28px;
+    }
+  }
+}
+
+.main-header__navigation {
+  margin: 0 15px;
+
+  @media (max-width: 900px) {
+    position: fixed;
+    top: -100%;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    background-color: $blue-background;
+    padding-top: 40px;
+    padding-left: 20px;
+  }
+
+  &-list {
+    display: flex;
+    @media (max-width: 900px) {
+      display: block;
+    }
+
+    &__link {
+      @include textStyle-3;
+      min-width: 134px;
+      text-align: center;
+
+      @media (max-width: 1024px) {
+        min-width: 112px;
+      }
+
+      @media (max-width: 900px) {
+        @include textStyle-7;
+        text-align: start;
+        height: 63px;
+      }
+
+      & a {
+        position: relative;
+        color: $white;
+      }
+
+      & a::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -40px;
+        width: 0;
+        height: 3px;
+        background-color: $light-grey;
+        transition: width 0.3s;
+      }
+
+      & a:hover:before {
+        width: 100%;
+        @media (max-width: 900px) {
+          width: 0;
+        }
+      }
+
+      & a:active:before {
+        background-color: $red-hover;
+      }
+    }
+  }
+}
+
+.to-open_menu-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  width: 56px;
+  height: 56px;
+  background-image: url("../assets/images/header/icon_menu.svg");
+  background-size: cover;
+  cursor: pointer;
+
+  @media (max-width: 900px) {
+    display: block;
+    margin: 0 15px;
+  }
+}
+
+.to-open_menu-btn.active {
+  background-image: url(../assets/images/header/Group.svg);
+}
+
+.main-header__navigation.active {
+  top: 70px;
+}
